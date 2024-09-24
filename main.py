@@ -30,6 +30,12 @@ def mul():
     b = request.args.get('b', type=float)
     return jsonify({'result': a * b})
 
+@app.route('/pow', methods=['GET'])
+def pow():
+    a = request.args.get('a', type=float)
+    b = request.args.get('b', type=float)
+    return jsonify({'result': a ** b})
+
 
 if __name__ == "__main__":
     app.run(debug=True)
