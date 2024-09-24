@@ -19,7 +19,7 @@ def subtract():
     return jsonify({'result': a - b})
 
 @app.route('/div', methods=['GET'])
-def subtract():
+def div():
     a = request.args.get('a', type=float)
     b = request.args.get('b', type=float)
     return jsonify({'result': a / b})
